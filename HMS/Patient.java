@@ -73,8 +73,12 @@ public class Patient {
         this.id = null;
         this.birthdate = null;
         this.appointments.clear();
+         
     }
-    
+    public void editPatient(String name, String sexuality, String id, String birthdate){
+        removePatient();
+        addPatient(name, sexuality,id,birthdate);
+    }
     public void viewPatient() {
         System.out.println("Patient ID: " + id);
         System.out.println("Name: " + name);
