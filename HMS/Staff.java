@@ -76,11 +76,16 @@ public class Staff {
     }
     
     public void removeStaff() {
-    	
+    	this.name = null;
+        this.id = null;
+        this. role = null;
+        this.contact = null;
+        this.status= null;
     }
  
     public boolean editStaff(String name, String id, String role, String contact) {
-    	
+    	removeStaff();
+        addStaff(name,id,role,contact);
     }
     
 
@@ -88,7 +93,7 @@ public class Staff {
         this.status = newStatus;
     }
 
-    public boolean searchStaff(String keyword) {
+    public boolean searchStaffbyID(String id) {
         return name.contains(keyword) || id.contains(keyword) || role.contains(keyword);
     }
 

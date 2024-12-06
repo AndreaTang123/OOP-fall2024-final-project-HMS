@@ -79,6 +79,7 @@ public class Patient {
         removePatient();
         addPatient(name, sexuality,id,birthdate);
     }
+    
     public void viewPatient() {
         System.out.println("Patient ID: " + id);
         System.out.println("Name: " + name);
