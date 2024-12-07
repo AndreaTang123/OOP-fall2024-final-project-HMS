@@ -4,16 +4,17 @@ public class Patient {
 	//attributes
 	private String id;
 	private String name;
-	private String sexuality;
-	private String birthdate;
+    private String age;
+	private String gender;
+	
 	
 	
 	//constructor
-	public Patient(String id, String name, String sexuality, String birthdate) {
+	public Patient(String id, String name, String gender) {
         this.id = id;
         this.name = name;
-        this.sexuality = sexuality;
-        this.birthdate = birthdate;
+        this.gender = gender;
+     
         
     }
 	public Patient() {}
@@ -27,6 +28,13 @@ public class Patient {
         this.id = id;
     }
 
+    public String getAge(){
+        return age;
+    }
+    public void setAge(String age){
+        this.age = age;
+    }
+
     public String getName() {
         return name;
     }
@@ -35,51 +43,42 @@ public class Patient {
         this.name = name;
     }
 
-    public String getSexuality() {
-        return sexuality;
+    public String getGender() {
+        return gender;
     }
 
-    public void setSexuality(String sexuality) {
-        this.sexuality = sexuality;
-    }
-
-    public String getBirthdate() {
-        return birthdate;
-    }
-
-    public void setBirthdate(String birthdate) {
-        this.birthdate = birthdate;
+    public void setGender(String sexuality) {
+        this.gender = sexuality;
     }
 
    
     //methods
-    public void addPatient(String name, String sexuality, String id, String birthdate) {
+    public String viewPatient() {
+        return "ID: " + id + ", Name: " + name + ", Age: " + age + ", Gender: " + gender;
+      
+    }
+
+    public void addPatient(String name, String gender, String id, String age) {
         this.name = name;
-        this.sexuality = sexuality;
+        this.gender = gender;
         this.id = id;
-        this.birthdate = birthdate;
+        this.age = age;
     }
     
     public void removePatient() {
         this.name = null;
-        this.sexuality = null;
+        this.gender = null;
         this.id = null;
-        this.birthdate = null;
+        this.age = null;
      
          
     }
-    public void editPatient(String name, String sexuality, String id, String birthdate){
+    public void editPatient(String name, String gender, String id, String age){
         removePatient();
-        addPatient(name, sexuality,id,birthdate);
+        addPatient(name, gender,id,age);
     }
     
-    public void viewPatient() {
-        System.out.println("Patient ID: " + id);
-        System.out.println("Name: " + name);
-        System.out.println("Sexuality: " + sexuality);
-        System.out.println("Birthdate: " + birthdate);
-      
-    }
+    
     
     public boolean searchPatientByName(String name) {
         if(this.name != null && this.name.equals(name)){
