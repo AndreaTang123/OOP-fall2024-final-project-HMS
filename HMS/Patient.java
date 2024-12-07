@@ -58,6 +58,13 @@ public class Patient {
       
     }
 
+    public void editDetails(String name, String gender, String id, String age){
+        this.name = name;
+        this.gender = gender;
+        this.id = id;
+        this.age = age;
+    }
+
   
     
     
