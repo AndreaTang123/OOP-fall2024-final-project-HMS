@@ -58,43 +58,12 @@ public class Patient {
       
     }
 
-    public void addPatient(String name, String gender, String id, String age) {
-        this.name = name;
-        this.gender = gender;
-        this.id = id;
-        this.age = age;
-    }
-    
-    public void removePatient() {
-        this.name = null;
-        this.gender = null;
-        this.id = null;
-        this.age = null;
-     
-         
-    }
-    public void editPatient(String name, String gender, String id, String age){
-        removePatient();
-        addPatient(name, gender,id,age);
-    }
+  
     
     
-    
-    public boolean searchPatientByName(String name) {
-        if(this.name != null && this.name.equals(name)){
-            viewPatient();
-            return true;
-        }
-        return false;
-    }
+   
 
-    public boolean searchPatientById(String id) {
-        if(this.id != null && this.id.equals(id)){
-            viewPatient();
-            return true;
-        }
-        return false;
-    }
+    
     
    
 
