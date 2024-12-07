@@ -45,7 +45,7 @@ public class patientServce {
   //edit
   public boolean editPatient(Patient selected, String name, String gender, String id, String age){
     if(selected!= null && patients.contains(selected)){
-        patients.remove(selected);
+        
         selected.editDetails(name, gender, id, age);
         return true;
     }

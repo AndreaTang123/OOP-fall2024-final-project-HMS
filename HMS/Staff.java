@@ -70,48 +70,20 @@ public class Staff {
         this.status = status;
     }
 
-    public void viewStaff() {
-        System.out.println("Staff Name: " + name);
-        System.out.println("ID: " + id);
-        System.out.println("Role: " + role);
-        System.out.println("Contact: " + contact);
-        System.out.println("Status: " + status);
+    public String viewStaff() {
+        return "ID: " + id + ", Name: "+ name + ", Role: "+ role + ", Contact: "+ contact + ", Status: "+ status;
     }
     
-    public void removeStaff() {
-    	this.name = null;
-        this.id = null;
-        this. role = null;
-        this.contact = null;
-        this.status= null;
-    }
- 
-    public void editStaff(String name, String id, String role, String contact, String status) {
-    	removeStaff();
-        addStaff(name,id,role,contact, status);
-        
-    }
-    
+    public void editDetails(String name, String id, String role, String contact){
+        this.name = name;
+        this.id = id;
+        this.role = role;
+        this.contact = contact;
 
-    public void editStatus(String newStatus) {
-        this.status = newStatus;
     }
 
-    public boolean searchStaffbyID(String id) {
-        if(this.id != null && this.id.equals(id)){
-            viewStaff();
-            return true;
-        }
-        return false;
-    }
-
-    public boolean searchStaffbyName(String name){
-        if(this.name != null && this.name.equals(name)){
-            viewStaff();
-            return true;
-        }
-        return false;
-
+    public void editStatus(String status){
+        this.status = status;
     }
 
 }
