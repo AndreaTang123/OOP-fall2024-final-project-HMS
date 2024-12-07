@@ -1,4 +1,5 @@
 
+
 public class Staff {
 	
 	//attributes
@@ -8,6 +9,7 @@ public class Staff {
     private String contact;
     private String status;
     
+    
  // Constructor
     public Staff(String name, String id, String role, String department, String contact, String status) {
         this.name = name;
@@ -15,6 +17,7 @@ public class Staff {
         this.role = role;
         this.contact = contact;
         this.status = "active";
+        
     }
     
  // Getter and Setter methods

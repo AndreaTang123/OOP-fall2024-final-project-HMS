@@ -1,4 +1,4 @@
-import java.util.*;
+
 public class Patient {
 	
 	//attributes
@@ -6,7 +6,7 @@ public class Patient {
 	private String name;
 	private String sexuality;
 	private String birthdate;
-	private List<String> appointments;
+	
 	
 	//constructor
 	public Patient(String id, String name, String sexuality, String birthdate) {
@@ -14,7 +14,7 @@ public class Patient {
         this.name = name;
         this.sexuality = sexuality;
         this.birthdate = birthdate;
-        this.appointments = new ArrayList<>();
+        
     }
 	public Patient() {}
 	
@@ -51,14 +51,7 @@ public class Patient {
         this.birthdate = birthdate;
     }
 
-    public List<String> getAppointments() {
-        return appointments;
-    }
-
-    public void addAppointment(String appointment) {
-        this.appointments.add(appointment);
-    }
-    
+   
     //methods
     public void addPatient(String name, String sexuality, String id, String birthdate) {
         this.name = name;
@@ -72,7 +65,7 @@ public class Patient {
         this.sexuality = null;
         this.id = null;
         this.birthdate = null;
-        this.appointments.clear();
+     
          
     }
     public void editPatient(String name, String sexuality, String id, String birthdate){
@@ -85,15 +78,23 @@ public class Patient {
         System.out.println("Name: " + name);
         System.out.println("Sexuality: " + sexuality);
         System.out.println("Birthdate: " + birthdate);
-        System.out.println("Appointments: " + appointments);
+      
     }
     
     public boolean searchPatientByName(String name) {
-        return this.name != null && this.name.contains(name);
+        if(this.name != null && this.name.equals(name)){
+            viewPatient();
+            return true;
+        }
+        return false;
     }
 
     public boolean searchPatientById(String id) {
-        return this.id != null && this.id.equals(id);
+        if(this.id != null && this.id.equals(id)){
+            viewPatient();
+            return true;
+        }
+        return false;
     }
     
    

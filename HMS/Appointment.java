@@ -91,4 +91,8 @@ public class Appointment {
         System.out.println("Date: " + date);
         System.out.println("Status: " + status);
     }
+
+    public void viewAllApt(){
+        
+    }
 }
