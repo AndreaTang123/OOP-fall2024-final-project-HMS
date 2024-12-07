@@ -14,6 +14,41 @@ public class Appointment {
         this.date = date;
         this.status = status;
     }
+    public Appointment(){}
+
+    //getters and setters
+    public String getAptId(){
+        return appointmentId;
+    }
+
+    public void setAptId(String id){
+        this.appointmentId = id;
+    }
+    public String getPatientId(){
+        return patientId;
+    }
+    public void setPatientId(String pid){
+        this.patientId = pid;
+    }
+    public String getStaffId(){
+        return staffId;
+    }
+    public void setStaffId(String sid){
+        this.staffId = sid;
+    }
+    public String getDate(){
+        return date;
+    }
+    public void setDate(String d){
+        this.date = d;
+    }
+
+    public String getStatus(){
+        return status;
+    }
+    public void setStatus(String st){
+        this.status = st;
+    }
 
     // Methods
     public void bookApt(String appointmentId, String patientId, String staffId, String date) {
