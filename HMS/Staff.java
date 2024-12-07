@@ -59,7 +59,7 @@ public class Staff {
     }
     
  // Methods
-    public void addStaff(String name, String id, String role, String contact) {
+    public void addStaff(String name, String id, String role, String contact, String status) {
         this.name = name;
         this.id = id;
         this.role = role;
@@ -83,9 +83,10 @@ public class Staff {
         this.status= null;
     }
  
-    public boolean editStaff(String name, String id, String role, String contact) {
+    public void editStaff(String name, String id, String role, String contact, String status) {
     	removeStaff();
-        addStaff(name,id,role,contact);
+        addStaff(name,id,role,contact, status);
+        
     }
     
 
@@ -94,7 +95,20 @@ public class Staff {
     }
 
     public boolean searchStaffbyID(String id) {
-        return name.contains(keyword) || id.contains(keyword) || role.contains(keyword);
+        if(this.id != null && this.id.equals(id)){
+            viewStaff();
+            return true;
+        }
+        return false;
+    }
+
+    public boolean searchStaffbyName(String name){
+        if(this.name != null && this.name.equals(name)){
+            viewStaff();
+            return true;
+        }
+        return false;
+
     }
 
 }
