@@ -68,21 +68,7 @@ public class Appointment {
         this.status = "cancelled";
     }
 
-    public boolean searchAptByPatient(String patientId) {
-        if (this.patientId != null && this.patientId.equals(patientId)) {
-            viewApt();
-            return true;
-        }
-        return false;
-    }
-
-    public boolean searchAptByStaff(String staffId) {
-        if (this.staffId != null && this.staffId.equals(staffId)) {
-            viewApt();
-            return true;
-        }
-        return false;
-    }
+    
 
     public void viewApt() {
         System.out.println("Appointment ID: " + appointmentId);
