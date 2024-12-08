@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class patientServce {
+public class patientManager {
 
   private List<Patient> patients = new ArrayList<>(); 
   
