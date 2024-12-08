@@ -62,13 +62,7 @@ public class Staff {
     }
     
  // Methods
-    public void addStaff(String name, String id, String role, String contact, String status) {
-        this.name = name;
-        this.id = id;
-        this.role = role;
-        this.contact = contact;
-        this.status = status;
-    }
+    
 
     public String viewStaff() {
         return "ID: " + id + ", Name: "+ name + ", Role: "+ role + ", Contact: "+ contact + ", Status: "+ status;

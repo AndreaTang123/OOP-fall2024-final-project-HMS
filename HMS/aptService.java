@@ -32,5 +32,27 @@ public class aptService {
     }
     
     //edit 
-    public boolean editApt (Appointment selected, String pid, String sid, String date)
+    public boolean editApt (Appointment selected, String pid, String sid, String date){
+        if (selected != null) {
+            selected.editDetails(pid, sid, date);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean editStatus(Appointment selected, String status){
+        if (selected != null) {
+            selected.editStatus(status);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean cancelApt(Appointment apt){
+        if(apt!=null && appointments.contains(apt)){
+            appointments.remove(apt);
+            return true;
+        }
+        return false;
+    }
 }

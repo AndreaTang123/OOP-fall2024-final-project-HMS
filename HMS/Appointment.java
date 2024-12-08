@@ -49,36 +49,22 @@ public class Appointment {
     public void setStatus(String st){
         this.status = st;
     }
-
-    // Methods
-    public void bookApt(String appointmentId, String patientId, String staffId, String date) {
-        this.appointmentId = appointmentId;
-        this.patientId = patientId;
-        this.staffId = staffId;
-        this.date = date;
-        this.status = "booked";
-    }
-
-    public void editApt(String date, String status) {
-        if (date != null) this.date = date;
-        if (status != null) this.status = status;
-    }
-
-    public void cancelApt() {
-        this.status = "cancelled";
-    }
-
     
 
-    public void viewApt() {
-        System.out.println("Appointment ID: " + appointmentId);
-        System.out.println("Patient ID: " + patientId);
-        System.out.println("Staff ID: " + staffId);
-        System.out.println("Date: " + date);
-        System.out.println("Status: " + status);
+    public String viewApt() {
+
+        return "Appointment ID: " + appointmentId + ", Patient ID: " + patientId + ", Staff ID: " + staffId
+        + " Date: " + date + ", Status: " + status;
     }
 
-    public void viewAllApt(){
-        
+    public void editDetails(String pid, String sid, String date){
+        this.patientId = pid;
+        this.staffId = sid;
+        this.date = date;
     }
+
+    public void editStatus(String status){
+        this.status = status;
+    }
+    
 }
