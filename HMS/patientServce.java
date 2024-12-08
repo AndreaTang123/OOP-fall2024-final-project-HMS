@@ -12,7 +12,7 @@ public class patientServce {
   //search methods
   public Patient searchPatientById(String id) {
     for (Patient patient : patients) {
-        if (patient.getId() == id) {
+        if (patient.getId().equals(id)) {
             return patient;
         }
     }
@@ -21,7 +21,7 @@ public class patientServce {
 
   public Patient searchPatientByName(String name){
     for (Patient patient : patients) {
-        if (patient.getName() == name) {
+        if (patient.getName().equals(name)) {
             return patient;
         }
     }

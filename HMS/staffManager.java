@@ -10,7 +10,7 @@ public class staffManager {
     //search methods
     public Staff searchStaffById(String id){
         for(Staff staff: staffList){
-            if(staff.getId()==id){
+            if(staff.getId().equals(id)){
                 return staff;
             }
         }
@@ -19,7 +19,7 @@ public class staffManager {
 
     public Staff searchStaffByName(String name){
         for(Staff staff: staffList){
-            if(staff.getName()==name){
+            if(staff.getName().equals(name)){
                 return staff;
             }
         }

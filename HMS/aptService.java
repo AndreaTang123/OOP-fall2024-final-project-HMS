@@ -10,7 +10,7 @@ public class aptService {
     //search 
     public Appointment searchAppointmentByPatient(String pid) {
         for (Appointment appointment : appointments) {
-            if (appointment.getPatientId() == pid) {
+            if (appointment.getPatientId().equals(pid)) {
                 return appointment;
             }
         }
@@ -19,7 +19,7 @@ public class aptService {
 
     public Appointment searchAppointmentByStaff(String sid) {
         for (Appointment appointment : appointments) {
-            if (appointment.getStaffId() == sid) {
+            if (appointment.getStaffId().equals(sid)) {
                 return appointment;
             }
         }
