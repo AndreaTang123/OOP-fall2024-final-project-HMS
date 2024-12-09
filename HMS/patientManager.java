@@ -2,61 +2,54 @@ import java.util.*;
 
 public class patientManager {
 
-  private List<Patient> patients = new ArrayList<>(); 
-  
-  // Add a new patient
-  public void addPatient(Patient patient){
-    patients.add(patient);
-  }
-
-  //search methods
-  public Patient searchPatientById(String id) {
-    for (Patient patient : patients) {
-        if (patient.getId().equals(id)) {
-            return patient;
-        }
-    }
-    return null; // Not found
-  }
-
-  public Patient searchPatientByName(String name){
-    for (Patient patient : patients) {
-        if (patient.getName().equals(name)) {
-            return patient;
-        }
-    }
-    return null;
-  }
-
-  //view all patient
-  public List<Patient> viewAllPatient(){
-    return patients;
-  }
-
-  //remove patient
-  public boolean deletePatient(Patient selected){
-    if(selected!= null && patients.contains(selected)){
-        patients.remove(selected);
-        return true;
-    }
-    return false;
-  }
-
-  //edit
-  public boolean editPatient(Patient selected, String name, String gender, String id, String age){
-    if(selected!= null && patients.contains(selected)){
-        
-        selected.editDetails(name, gender, id, age);
-        return true;
-    }
-    return false;
-  }
-
-
+    private List<Patient> patients = new ArrayList<>(); 
     
+    // Add a new patient
+    public void addPatient(Patient patient){
+        patients.add(patient);
+    }
 
+    // Search methods that return a list of patients with full details
+    public List<Patient> searchPatientById(String id) {
+        List<Patient> result = new ArrayList<>();
+        for (Patient patient : patients) {
+            if (patient.getId().equals(id)) {
+                result.add(patient);
+            }
+        }
+        return result; // Return list of patients with the same ID
+    }
 
+    public List<Patient> searchPatientByName(String name) {
+        List<Patient> result = new ArrayList<>();
+        for (Patient patient : patients) {
+            if (patient.getName().equals(name)) {
+                result.add(patient);
+            }
+        }
+        return result; // Return list of patients with the same name
+    }
 
+    // View all patients
+    public List<Patient> viewAllPatient(){
+        return patients;
+    }
 
+    // Remove a patient
+    public boolean deletePatient(Patient selected){
+        if(selected != null && patients.contains(selected)){
+            patients.remove(selected);
+            return true;
+        }
+        return false;
+    }
 
+    // Edit patient details
+    public boolean editPatient(Patient selected, String name, String gender, String id, String age){
+        if(selected != null && patients.contains(selected)){
+            selected.editDetails(name, gender, id, age);
+            return true;
+        }
+        return false;
+    }
 }

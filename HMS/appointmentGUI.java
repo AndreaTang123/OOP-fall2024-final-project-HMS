@@ -81,7 +81,7 @@ public class appointmentGUI extends JFrame{
 	}
 	
 	private void openViewAllGUI() {
-		viewAllGUI viewAllGUI = new viewAllGUI(appointmentGUI.this, manager);
+		ViewAllGUI viewAllGUI = new ViewAllGUI(appointmentGUI.this, manager);
 		viewAllGUI.setVisible(true);
         appointmentGUI.this.setVisible(false);
         appointmentGUI.this.dispose();
