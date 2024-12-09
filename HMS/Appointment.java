@@ -1,6 +1,8 @@
 public class Appointment {
 
-    private String appointmentId;
+
+    private static int counter = 0;
+    private int appointmentId;
     private String patientId;
     private String staffId;
     private String date;
@@ -8,6 +10,7 @@ public class Appointment {
 
     // Constructor
     public Appointment(String patientId, String staffId, String date, String status) {
+        this.appointmentId = ++ counter;
         this.patientId = patientId;
         this.staffId = staffId;
         this.date = date;
@@ -16,11 +19,11 @@ public class Appointment {
     public Appointment(){}
 
     //getters and setters
-    public String getAptId(){
-        return appointmentId;
+    public int getAptId(){
+        return this.appointmentId;
     }
 
-    public void setAptId(String id){
+    public void setAptId(int id){
         this.appointmentId = id;
     }
     public String getPatientId(){
@@ -47,6 +50,9 @@ public class Appointment {
     }
     public void setStatus(String st){
         this.status = st;
+    }
+    public static void setCounter(int lastId){
+        counter = lastId;
     }
     
 

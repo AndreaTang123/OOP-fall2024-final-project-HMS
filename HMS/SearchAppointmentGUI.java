@@ -148,12 +148,12 @@ public class SearchAppointmentGUI extends JFrame {
         int selectedIndex = appointmentList.getSelectedIndex();
         if (selectedIndex != -1) {
             String selectedAppointmentData = appointmentList.getSelectedValue();
-            String appointmentId = selectedAppointmentData.split(",")[0].split(":")[1].trim();  // Extract Appointment ID
+            int appointmentId = Integer.parseInt(selectedAppointmentData.split(",")[0].split(":")[1].trim());  // Extract and convert Appointment ID
             Appointment appointmentToEdit = null;
 
             // Find the appointment by ID
             for (Appointment apt : manager.viewAllAppointments()) {
-                if (apt.getAptId() != null && apt.getAptId().equals(appointmentId)) {
+                if (apt.getAptId() != -1 && apt.getAptId() == appointmentId) {
                     appointmentToEdit = apt;
                     break;
                 }
@@ -172,12 +172,12 @@ public class SearchAppointmentGUI extends JFrame {
         int selectedIndex = appointmentList.getSelectedIndex();
         if (selectedIndex != -1) {
             String selectedAppointmentData = appointmentList.getSelectedValue();
-            String appointmentId = selectedAppointmentData.split(",")[0].split(":")[1].trim();  // Extract Appointment ID
+            int appointmentId = Integer.parseInt(selectedAppointmentData.split(",")[0].split(":")[1].trim());
             Appointment appointmentToCancel = null;
 
             // Find the appointment by ID
             for (Appointment apt : manager.viewAllAppointments()) {
-                if (apt.getAptId() != null && apt.getAptId().equals(appointmentId)) {
+                if (apt.getAptId() != -1 && apt.getAptId() == appointmentId) {
                     appointmentToCancel = apt;
                     break;
                 }

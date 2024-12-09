@@ -7,22 +7,22 @@ public class aptService {
         appointments.add(appointment);
     }
 
- // Search by patient name
-    public List<Appointment> searchAppointmentByPatient(String pname) {
+ // Search by patientid
+    public List<Appointment> searchAppointmentByPatient(String pid) {
         List<Appointment> result = new ArrayList<>();
         for (Appointment appointment : appointments) {
-            if (appointment.getPatientId().equalsIgnoreCase(pname)) {
+            if (appointment.getPatientId().equalsIgnoreCase(pid)) {
                 result.add(appointment);
             }
         }
         return result;
     }
 
-    // Search by staff name
-    public List<Appointment> searchAppointmentByStaff(String sname) {
+    // Search by staffid
+    public List<Appointment> searchAppointmentByStaff(String sid) {
         List<Appointment> result = new ArrayList<>();
         for (Appointment appointment : appointments) {
-            if (appointment.getStaffId().equalsIgnoreCase(sname)) {
+            if (appointment.getStaffId().equalsIgnoreCase(sid)) {
                 result.add(appointment);
             }
         }
