@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 public class patientGUI extends JFrame{
-	private MainGUI mainGUI;
+	
     private JPanel patientPane;
     private patientManager manager = new patientManager();
 

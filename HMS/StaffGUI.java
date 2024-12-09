@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 public class staffGUI extends JFrame{
-	private MainGUI mainGUI;
+	
     private JPanel staffPane;
     private staffManager manager = new staffManager();
 

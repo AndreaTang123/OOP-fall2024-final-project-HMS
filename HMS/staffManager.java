@@ -45,9 +45,9 @@ public class staffManager {
     }
 
     // Edit staff details
-    public boolean editStaff(Staff selected, String name, String id, String role, String contact) {
-        if (selected != null && staffList.contains(selected)) {
-            selected.editDetails(name, id, role, contact);
+    public boolean editStaff(Staff staff) {
+        if (staff != null && staffList.contains(staff)) {
+            staff.editDetails(staff.getName(), staff.getId(), staff.getRole(), staff.getContact());
             return true;
         }
         return false;

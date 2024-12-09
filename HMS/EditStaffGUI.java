@@ -99,7 +99,7 @@ public class EditStaffGUI extends JFrame {
         String contact = contactField.getText();
 
         staffToEdit.editDetails(name, id, role, contact); // Update the current staff's details
-
+        manager.editStaff(staffToEdit);
         JOptionPane.showMessageDialog(this, "Staff updated successfully!");
     }
 }
