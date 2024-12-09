@@ -1,5 +1,4 @@
 
-
 public class Staff {
 	
 	//attributes
@@ -11,7 +10,7 @@ public class Staff {
     
     
  // Constructor
-    public Staff(String name, String id, String role, String department, String contact, String status) {
+    public Staff(String name, String id, String role, String contact) {
         this.name = name;
         this.id = id;
         this.role = role;
