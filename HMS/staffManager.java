@@ -1,6 +1,14 @@
 import java.util.*;
 
 public class staffManager {
+
+    public staffManager(){
+        staffList.add(new Staff("S001", "Alice Johnson", "Doctor", "alice.johnson@example.com"));
+        staffList.add(new Staff("S002", "Bob Smith", "Nurse", "bob.smith@example.com"));
+        staffList.add(new Staff("S003", "Charlie Brown", "Technician", "charlie.brown@example.com"));
+    }
+
+    
     private List<Staff> staffList = new ArrayList<>();
 
     // Add a new staff

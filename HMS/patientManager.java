@@ -2,6 +2,12 @@ import java.util.*;
 
 public class patientManager {
 
+    public patientManager() {
+        patients.add(new Patient("P001", "John Doe", "Male", "35"));
+        patients.add(new Patient("P002", "Jane Smith", "Female", "28"));
+        patients.add(new Patient("P003", "Alice Johnson", "Female", "40"));
+    }
+
     private List<Patient> patients = new ArrayList<>(); 
     
     // Add a new patient
