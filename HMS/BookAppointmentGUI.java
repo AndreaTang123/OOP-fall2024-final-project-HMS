@@ -30,7 +30,7 @@ public class BookAppointmentGUI extends JFrame{
         title.setBounds(150, 50, 200, 30);
         registerPane.add(title);
 
-        JLabel pnameLabel = new JLabel("Appointment Name:");
+        JLabel pnameLabel = new JLabel("Patient Name:");
         pnameLabel.setBounds(50, 100, 100, 30);
         registerPane.add(pnameLabel);
 

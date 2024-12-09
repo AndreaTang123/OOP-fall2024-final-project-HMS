@@ -35,7 +35,7 @@ public class appointmentGUI extends JFrame{
         appointmentPane.add(registerButton);
 
         // Search Button
-        JButton searchButton = new JButton("Search Existing Appointments");
+        JButton searchButton = new JButton("Search Appointments");
         searchButton.setBounds(150, 170, 200, 30);
         searchButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -43,6 +43,16 @@ public class appointmentGUI extends JFrame{
             }
         });
         appointmentPane.add(searchButton);
+        
+        // View ALl Button
+        JButton viewAllButton = new JButton("View All Appointments");
+        viewAllButton.setBounds(150, 220, 200, 30);
+        viewAllButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	openViewAllGUI();
+            }
+        });
+        appointmentPane.add(viewAllButton);
 
         // Return Button
         JButton returnButton = new JButton("Return");
