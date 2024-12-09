@@ -7,8 +7,7 @@ public class Appointment {
     private String status;
 
     // Constructor
-    public Appointment(String appointmentId, String patientId, String staffId, String date, String status) {
-        this.appointmentId = appointmentId;
+    public Appointment(String patientId, String staffId, String date, String status) {
         this.patientId = patientId;
         this.staffId = staffId;
         this.date = date;
