@@ -3,6 +3,13 @@ import java.util.*;;
 public class aptService {
     private List<Appointment> appointments = new ArrayList<>();
 
+    public aptService(){
+        // Pre-store three appointment objects
+        appointments.add(new Appointment("P001", "S001", "2024-12-10", "Scheduled"));
+        appointments.add(new Appointment("P002", "S002", "2024-12-11", "Scheduled"));
+        appointments.add(new Appointment("P003", "S003", "2024-12-12", "Scheduled"));
+    }
+
     public void bookAppointment(Appointment appointment) {
         appointments.add(appointment);
     }
