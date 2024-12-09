@@ -10,10 +10,11 @@ public class Patient {
 	
 	
 	//constructor
-	public Patient(String id, String name, String gender) {
+	public Patient(String id, String name, String gender, String age) {
         this.id = id;
         this.name = name;
         this.gender = gender;
+        this.age = age;
      
         
     }
