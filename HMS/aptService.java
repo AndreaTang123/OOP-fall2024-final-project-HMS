@@ -7,23 +7,26 @@ public class aptService {
         appointments.add(appointment);
     }
 
-    //search 
-    public Appointment searchAppointmentByPatient(String pid) {
+ // Search by patient name
+    public List<Appointment> searchAppointmentByPatient(String pname) {
+        List<Appointment> result = new ArrayList<>();
         for (Appointment appointment : appointments) {
-            if (appointment.getPatientId().equals(pid)) {
-                return appointment;
+            if (appointment.getPatientId().equalsIgnoreCase(pname)) {
+                result.add(appointment);
             }
         }
-        return null; // Not found
+        return result;
     }
 
-    public Appointment searchAppointmentByStaff(String sid) {
+    // Search by staff name
+    public List<Appointment> searchAppointmentByStaff(String sname) {
+        List<Appointment> result = new ArrayList<>();
         for (Appointment appointment : appointments) {
-            if (appointment.getStaffId().equals(sid)) {
-                return appointment;
+            if (appointment.getStaffId().equalsIgnoreCase(sname)) {
+                result.add(appointment);
             }
         }
-        return null; // Not found
+        return result;
     }
 
     //view all
@@ -55,4 +58,6 @@ public class aptService {
         }
         return false;
     }
+    
+
 }

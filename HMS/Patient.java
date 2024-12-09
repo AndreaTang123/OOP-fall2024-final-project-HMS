@@ -1,26 +1,20 @@
-
 public class Patient {
-	
-	//attributes
-	private String id;
-	private String name;
+    
+    // Attributes
+    private String id;
+    private String name;
     private String age;
-	private String gender;
-	
-	
-	
-	//constructor
-	public Patient(String id, String name, String gender, String age) {
+    private String gender;
+    
+    // Constructor
+    public Patient(String id, String name, String gender, String age) {
         this.id = id;
         this.name = name;
         this.gender = gender;
         this.age = age;
-     
-        
     }
-	public Patient() {}
-	
-	// Getter and Setter methods
+
+    // Getters and Setters
     public String getId() {
         return id;
     }
@@ -29,10 +23,11 @@ public class Patient {
         this.id = id;
     }
 
-    public String getAge(){
+    public String getAge() {
         return age;
     }
-    public void setAge(String age){
+
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -48,15 +43,13 @@ public class Patient {
         return gender;
     }
 
-    public void setGender(String sexuality) {
-        this.gender = sexuality;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-   
-    //methods
+    // Method to return a formatted string with all details
     public String viewPatient() {
         return "ID: " + id + ", Name: " + name + ", Age: " + age + ", Gender: " + gender;
-      
     }
 
     public void editDetails(String name, String gender, String id, String age){
@@ -65,14 +58,4 @@ public class Patient {
         this.id = id;
         this.age = age;
     }
-
-  
-    
-    
-   
-
-    
-    
-   
-
 }

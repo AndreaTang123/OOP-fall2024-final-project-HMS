@@ -103,7 +103,7 @@ public class SearchPatientGUI extends JFrame {
         returnButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 parent.setVisible(true);
-                SearchPatientGUI.this.dispose();
+                SearchPatientGUI.this.dispose();  // Close SearchPatientGUI when returning
             }
         });
         searchPane.add(returnButton);
