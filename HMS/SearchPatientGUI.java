@@ -141,7 +141,10 @@ public class SearchPatientGUI extends JFrame {
             Patient patientToEdit = manager.searchPatientById(id).get(0);  // Get the first patient from the list
 
             if (patientToEdit != null) {
-                new EditPatientGUI(this, patientToEdit, manager);  // Open the EditPatientGUI with selected patient
+                EditPatientGUI g = new EditPatientGUI(this, patientToEdit, manager);  // Open the EditPatientGUI with selected patient
+                g.setVisible(true);
+                SearchPatientGUI.this.setVisible(false);
+                SearchPatientGUI.this.dispose();  // Close SearchPatientGUI when opening EditPatientGUI
             }
         }
     }
