@@ -3,9 +3,9 @@ import java.util.*;
 public class staffManager {
 
     public staffManager(){
-        staffList.add(new Staff("S001", "Alice Johnson", "Doctor", "alice.johnson@example.com"));
-        staffList.add(new Staff("S002", "Bob Smith", "Nurse", "bob.smith@example.com"));
-        staffList.add(new Staff("S003", "Charlie Brown", "Technician", "charlie.brown@example.com"));
+        staffList.add(new Staff("Alice Johnson", "S001", "Doctor", "alice.johnson@example.com"));
+        staffList.add(new Staff("Bob Smith", "S002", "Nurse", "bob.smith@example.com"));
+        staffList.add(new Staff("Charlie Brown", "S003", "Technician", "charlie.brown@example.com"));
     }
 
     
