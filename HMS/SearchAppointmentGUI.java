@@ -135,12 +135,6 @@ public class SearchAppointmentGUI extends JFrame {
         for (Appointment apt : appointments) {
         	listModel.addElement(apt.viewApt());  // Add each appointment to the list model
         }
-
-        // Enable the Edit and Cancel buttons when an appointment is selected
-        if (!appointments.isEmpty()) {
-            editButton.setEnabled(true);
-            cancelButton.setEnabled(true);
-        }
     }
 
     // Edit the selected appointment
@@ -160,8 +154,9 @@ public class SearchAppointmentGUI extends JFrame {
             }
 
             if (appointmentToEdit != null) {
-                new EditAppointmentGUI(this, appointmentToEdit, manager);  // Open the EditAppointmentGUI with selected appointment
-                SearchAppointmentGUI.this.setVisible(false);
+            	EditAppointmentGUI a = new EditAppointmentGUI(this, appointmentToEdit, manager);  // Open the EditAppointmentGUI with selected appointment
+                a.setVisible(true);
+            	SearchAppointmentGUI.this.setVisible(false);
                 SearchAppointmentGUI.this.dispose();  // Close SearchAppointmentGUI when opening EditAppointmentGUI
             }
         }
