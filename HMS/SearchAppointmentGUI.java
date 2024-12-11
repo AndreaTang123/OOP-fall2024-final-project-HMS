@@ -29,7 +29,7 @@ public class SearchAppointmentGUI extends JFrame {
         searchPane.add(title);
 
         // Search by Patient Name
-        JLabel searchByPatientLabel = new JLabel("Search by Patient Name:");
+        JLabel searchByPatientLabel = new JLabel("Search by Patient ID:");
         searchByPatientLabel.setBounds(50, 100, 150, 30);
         searchPane.add(searchByPatientLabel);
 
@@ -49,7 +49,7 @@ public class SearchAppointmentGUI extends JFrame {
         searchPane.add(searchButtonByPatient);
 
         // Search by Staff Name
-        JLabel searchByStaffLabel = new JLabel("Search by Staff Name:");
+        JLabel searchByStaffLabel = new JLabel("Search by Staff ID:");
         searchByStaffLabel.setBounds(50, 150, 150, 30);
         searchPane.add(searchByStaffLabel);
 
