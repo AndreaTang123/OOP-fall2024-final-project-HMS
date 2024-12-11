@@ -21,7 +21,7 @@ public class appointmentGUI extends JFrame{
         appointmentPane.setLayout(null);
 
         JLabel title = new JLabel("Appointment Management");
-        title.setBounds(190, 50, 200, 30);
+        title.setBounds(170, 50, 200, 30);
         appointmentPane.add(title);
 
         // Register Button
