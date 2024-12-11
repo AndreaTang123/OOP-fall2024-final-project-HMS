@@ -14,7 +14,7 @@ public class aptService {
         appointments.add(appointment);
     }
 
- // Search by patientid
+    // Search by patientid
     public List<Appointment> searchAppointmentByPatient(String pid) {
         List<Appointment> result = new ArrayList<>();
         for (Appointment appointment : appointments) {

@@ -195,7 +195,7 @@ public class SearchStaffGUI extends JFrame {
                 EditStaffStatusGUI a = new EditStaffStatusGUI(this, staffToEditStatus, manager);  // Open the EditStaffStatusGUI with selected staff
                 a.setVisible(true);
                 SearchStaffGUI.this.setVisible(false);
-                SearchStaffGUI.this.dispose();  // Close SearchStaffGUI when opening EditStaffStatusGUI
+                SearchStaffGUI.this.dispose();  
             } else {
                 JOptionPane.showMessageDialog(this, "Staff not found!");
             }
