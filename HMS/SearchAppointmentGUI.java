@@ -104,7 +104,7 @@ public class SearchAppointmentGUI extends JFrame {
         returnButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 parent.setVisible(true);
-                SearchAppointmentGUI.this.dispose();  // Close SearchAppointmentGUI when returning
+                SearchAppointmentGUI.this.dispose(); 
             }
         });
         searchPane.add(returnButton);
@@ -154,10 +154,10 @@ public class SearchAppointmentGUI extends JFrame {
             }
 
             if (appointmentToEdit != null) {
-            	EditAppointmentGUI a = new EditAppointmentGUI(this, appointmentToEdit, manager);  // Open the EditAppointmentGUI with selected appointment
+            	EditAppointmentGUI a = new EditAppointmentGUI(this, appointmentToEdit, manager); 
                 a.setVisible(true);
             	SearchAppointmentGUI.this.setVisible(false);
-                SearchAppointmentGUI.this.dispose();  // Close SearchAppointmentGUI when opening EditAppointmentGUI
+                SearchAppointmentGUI.this.dispose(); 
             }
         }
     }
@@ -186,8 +186,8 @@ public class SearchAppointmentGUI extends JFrame {
         }
     }
 
-    // Load all appointments and display them in the list (No pre-population)
+    // Load all appointments and display them in the list
     private void loadAppointments() {
-        listModel.clear();  // Clear the list model before loading any appointments
+        listModel.clear();  
     }
 }

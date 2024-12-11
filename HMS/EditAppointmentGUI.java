@@ -8,7 +8,6 @@ public class EditAppointmentGUI extends JFrame {
     private aptService manager;
     private Appointment appointmentToEdit;
 
-    // Constructor now accepts the Appointment to be edited
     public EditAppointmentGUI(JFrame parent, Appointment appointment, aptService manager) {
         this.manager = manager;
         this.appointmentToEdit = appointment;
@@ -81,20 +80,17 @@ public class EditAppointmentGUI extends JFrame {
         editPane.add(cancelButton);
     }
 
-    // Method to update the appointment details
     private void updateAppointment() {
         String patientId = pnameField.getText();
         String staffId = snameField.getText();
         String date = dateField.getText();
         String status = statusField.getText();
 
-        // Call the manager to update the appointment
+        // Call manager to update the appointment
         manager.editApt(appointmentToEdit, patientId, staffId, date);
         manager.editStatus(appointmentToEdit, status);  // Update the status
 
         JOptionPane.showMessageDialog(this, "Appointment updated successfully!");
-
-        // Close the current window and show the parent window
         this.dispose();
     }
 }

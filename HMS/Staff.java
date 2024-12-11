@@ -8,8 +8,7 @@ public class Staff {
     private String contact;
     private String status;
     
-    
- // Constructor
+    // Constructor
     public Staff(String name, String id, String role, String contact) {
         this.name = name;
         this.id = id;
@@ -19,7 +18,7 @@ public class Staff {
         
     }
     
- // Getter and Setter methods
+    // Getter and Setter methods
     public String getName() {
         return name;
     }
@@ -60,9 +59,7 @@ public class Staff {
         this.status = status;
     }
     
- // Methods
-    
-
+    // Methods
     public String viewStaff() {
         return "ID: " + id + ", Name: "+ name + ", Role: "+ role + ", Contact: "+ contact + ", Status: "+ status;
     }

@@ -17,7 +17,6 @@ public class EditPatientGUI extends JFrame {
     private patientManager manager;
     private Patient patientToEdit;
 
-    // Constructor now accepts a Patient to be edited
     public EditPatientGUI(JFrame parent, Patient patient, patientManager manager) {
         this.manager = manager;
         this.patientToEdit = patient;

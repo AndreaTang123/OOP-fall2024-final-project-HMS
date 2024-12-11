@@ -17,7 +17,6 @@ public class EditStaffGUI extends JFrame {
     private staffManager manager;
     private Staff staffToEdit;
 
-    // Constructor now accepts a Staff to be edited
     public EditStaffGUI(JFrame parent, Staff staff, staffManager manager) {
         this.manager = manager;
         this.staffToEdit = staff;

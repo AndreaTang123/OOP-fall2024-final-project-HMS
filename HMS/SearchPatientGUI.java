@@ -138,13 +138,12 @@ public class SearchPatientGUI extends JFrame {
         if (selectedIndex != -1) {
             String selectedPatientData = patientList.getSelectedValue();
             String id = selectedPatientData.split(",")[1].split(":")[1].trim();
-            Patient patientToEdit = manager.searchPatientById(id).get(0);  // Get the first patient from the list
-
+            Patient patientToEdit = manager.searchPatientById(id).get(0); 
             if (patientToEdit != null) {
-                EditPatientGUI g = new EditPatientGUI(this, patientToEdit, manager);  // Open the EditPatientGUI with selected patient
+                EditPatientGUI g = new EditPatientGUI(this, patientToEdit, manager);  
                 g.setVisible(true);
                 SearchPatientGUI.this.setVisible(false);
-                SearchPatientGUI.this.dispose();  // Close SearchPatientGUI when opening EditPatientGUI
+                SearchPatientGUI.this.dispose(); 
             }
         }
     }
@@ -155,7 +154,7 @@ public class SearchPatientGUI extends JFrame {
         if (selectedIndex != -1) {
             String selectedPatientData = patientList.getSelectedValue();
             String id = selectedPatientData.split(",")[1].split(":")[1].trim();
-            Patient patientToDelete = manager.searchPatientById(id).get(0);  // Get the first patient from the list
+            Patient patientToDelete = manager.searchPatientById(id).get(0); 
 
             if (patientToDelete != null) {
                 manager.deletePatient(patientToDelete);
