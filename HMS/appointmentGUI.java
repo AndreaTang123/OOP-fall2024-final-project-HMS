@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 public class appointmentGUI extends JFrame{
-	private MainGUI mainGUI;
+	
     private JPanel appointmentPane;
     private aptService manager = new aptService();
 
